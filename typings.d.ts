@@ -46,6 +46,15 @@ export interface Skill extends SanityBody {
     url: string;
 }
 
+export interface TechnologieStack extends SanityBody {
+    _type: 'technologieStack';
+    title: string;
+    languages: string[];
+    frameworks: string[];
+    databases: string[];
+    tools: string[];
+}
+
 export interface Technology extends SanityBody {
     _type: 'skill';
     image: Image;

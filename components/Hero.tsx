@@ -23,8 +23,8 @@ const Hero = ({ homePage, socials }: Props) => {
 
     return (
         <div className="h-[80vh]">
-            <div className="grid grid-cols-1 md:grid-cols-5 place-content-center place-items-center items-center justify-center gap-x-10 w-full h-full">
-                <div className="flex flex-col md:block items-center justify-center order-last md:order-1 md:col-span-3">
+            <div className="grid grid-cols-1 md:grid-cols-4 place-content-center place-items-center items-center justify-center gap-x-10 w-full h-full">
+                <div className="flex flex-col md:block items-center justify-center order-last md:order-1 md:col-span-2">
                     <h1 className="mt-2 text-3xl uppercase md:text-4xl lg:text-5xl font-semibold tracking-wide">
                         {homePage.name}
                     </h1>
@@ -53,17 +53,25 @@ const Hero = ({ homePage, socials }: Props) => {
                         <Button className="font-semibold">Resume</Button>
                     </div>
                     <div className="mt-5 md:mb-20 space-x-2">
-                        <Link href="#about">
-                            <button className="heroButton">About</button>
+                        <Link href="#about-me">
+                            <button className="heroButton hover:text-orange-400">
+                                About
+                            </button>
                         </Link>
-                        <Link href="#experiances">
-                            <button className="heroButton">Experiances</button>
+                        <Link href="#my-experiance">
+                            <button className="heroButton hover:text-orange-400">
+                                Experiance
+                            </button>
                         </Link>
-                        <Link href="#skills">
-                            <button className="heroButton">Skills</button>
+                        <Link href="#my-skills">
+                            <button className="heroButton hover:text-orange-400">
+                                Skills
+                            </button>
                         </Link>
-                        <Link href="#projects">
-                            <button className="heroButton">Projects</button>
+                        <Link href="#my-projects">
+                            <button className="heroButton hover:text-orange-400">
+                                Projects
+                            </button>
                         </Link>
                     </div>
                 </div>

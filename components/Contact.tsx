@@ -4,8 +4,8 @@ type Props = {};
 
 const Contact = (props: Props) => {
     return (
-        <div className="flex flex-col mb-16">
-            <div className="group text-3xl font-bold">
+        <div className="group flex flex-col mb-16">
+            <div className="text-3xl font-bold">
                 <span className="group-hover:text-orange-400">Contact </span>
                 <span className="text-orange-400 group-hover:text-inherit">
                     Me

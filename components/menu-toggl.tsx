@@ -1,8 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
-import { useTheme } from 'next-themes';
+import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
+import { useRouter } from 'next/navigation';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -12,37 +12,37 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-export function ModeToggle() {
-    const { setTheme } = useTheme();
+export function MenuToggle() {
+    const router = useRouter();
 
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button
-                    className="bg-transparent border-2"
+                    className="bg-transparent border-0"
                     variant="outline"
                     size="icon"
                 >
-                    <SunIcon
+                    <HamburgerMenuIcon
                         color="orange"
-                        className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+                        className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all"
                     />
-                    <MoonIcon
+                    {/* <Cross1Icon
                         color="orange"
                         className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
-                    />
-                    <span className="sr-only">Toggle theme</span>
+                    /> */}
+                    <span className="sr-only">Toggle Menu</span>
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme('light')}>
-                    Light
+                <DropdownMenuItem onClick={() => router.push('/')}>
+                    Home
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme('dark')}>
-                    Dark
+                <DropdownMenuItem onClick={() => router.push('/projects')}>
+                    Projects
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme('system')}>
-                    System
+                <DropdownMenuItem onClick={() => router.push('/contact')}>
+                    Contact
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

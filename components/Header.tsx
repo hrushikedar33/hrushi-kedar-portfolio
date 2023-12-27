@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ModeToggle } from './theme-toggle';
 import { HomePage } from '@/typings';
 import { Button } from '@/components/ui/button';
+import { MenuToggle } from './menu-toggl';
 
 type Props = {
     homePage: HomePage;
@@ -57,15 +58,20 @@ const Header = ({ homePage }: Props) => {
                     className="flex flex-row items-center text-gray-300 space-x-3 cursor-pointer"
                 >
                     {/* TODO: Mobile view hamburgir menue */}
-                    <Button className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2">
-                        Projects
-                    </Button>
-                    <Button className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2">
-                        Contact
-                    </Button>
+                    <div className="hidden md:block space-x-3">
+                        <Button className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2">
+                            Projects
+                        </Button>
+                        <Button className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2">
+                            Contact
+                        </Button>
+                    </div>
                     <div className="bg-black dark:bg-white hover:bg-inherit rounded-lg">
                         <ModeToggle />
                         {/* TODO: change colour of toggle */}
+                    </div>
+                    <div className="md:hidden bg-black dark:bg-white hover:bg-inherit rounded-lg">
+                        <MenuToggle />
                     </div>
                 </motion.div>
             </div>

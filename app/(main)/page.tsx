@@ -4,16 +4,17 @@ import Experiance from '@/components/Experiance';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
-import { getExperiance } from '@/sanity/utils/getExperiance';
 
 import { getHomePage } from '@/sanity/utils/getHomePage';
+import { getExperiance } from '@/sanity/utils/getExperiance';
 import { getSocial } from '@/sanity/utils/getSocial';
-import Image from 'next/image';
+import { getTechnologieStack } from '@/sanity/utils/getTechnologieStack';
 
 export default async function Home() {
     const homePage = await getHomePage();
     const socials = await getSocial();
     const experiance = await getExperiance();
+    const technologyStack = await getTechnologieStack();
 
     return (
         <div className="container mx-auto">
@@ -30,7 +31,7 @@ export default async function Home() {
             </section>
 
             <section id="my-skills" className="snap-center">
-                <Skills />
+                <Skills technologyStack={technologyStack} />
             </section>
 
             <section id="my-projects" className="snap-center">
