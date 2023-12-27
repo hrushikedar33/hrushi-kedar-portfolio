@@ -9,9 +9,9 @@ const MainLayout = async ({ children }: { children: React.ReactNode }) => {
     const socials = await getSocial();
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-[100dvh]">
             <Header homePage={homePage} />
-            <div className="flex-1">{children}</div>
+            <main className="grow">{children}</main>
             <Footer />
         </div>
     );

@@ -23,20 +23,21 @@ const Hero = ({ homePage, socials }: Props) => {
 
     return (
         <div className="h-[80vh]">
-            <div className="grid grid-cols-3 gap-x-10 place-items-center place-content-center w-full h-full">
-                <div className="col-span-2">
-                    <h1 className="mt-2 text-3xl uppercase md:text-5xl font-semibold tracking-wide">
+            <div className="grid grid-cols-1 md:grid-cols-5 place-content-center place-items-center items-center justify-center gap-x-10 w-full h-full">
+                <div className="flex flex-col md:block items-center justify-center order-last md:order-1 md:col-span-3">
+                    <h1 className="mt-2 text-3xl uppercase md:text-4xl lg:text-5xl font-semibold tracking-wide">
                         {homePage.name}
                     </h1>
                     <h2 className="mt-2 text-lg uppercase text-gray-500 tracking-widest">
                         {homePage.role}
                     </h2>
-                    <hr className="border-2" />
+                    <hr className="border-2 w-full" />
                     <h2 className="mt-6 text-lg md:text-xl font-semibold">
-                        <span className="mr-3">{text}</span>
+                        <span className="text-orange-400">{text}</span>
                         <Cursor />
                     </h2>
-                    <div className="mt-5 md:mb-20 space-x-2">
+                    <div className="mt-2 md:mb-20 space-x-2">
+                        {/* TODO: change colour of this socials */}
                         {socials.map((social) => (
                             <SocialIcon
                                 key={social._id}
@@ -47,9 +48,9 @@ const Hero = ({ homePage, socials }: Props) => {
                         ))}
                     </div>
 
-                    <div className="space-x-2 items-center justify-center">
-                        <Button>Mail</Button>
-                        <Button>Resume</Button>
+                    <div className="mt-10 md:mt-0 space-x-2">
+                        <Button className="font-semibold">Mail</Button>
+                        <Button className="font-semibold">Resume</Button>
                     </div>
                     <div className="mt-5 md:mb-20 space-x-2">
                         <Link href="#about">
@@ -66,10 +67,10 @@ const Hero = ({ homePage, socials }: Props) => {
                         </Link>
                     </div>
                 </div>
-                <div className="col-span-1">
+                <div className="order-1 md:order-last mb-6 md:mb-0 md:col-span-2">
                     <div>
                         <Image
-                            className="border-2 rounded-full h-[400px] w-[400px] object-contain bg-orange-400"
+                            className="border-2 rounded-full h-[200px] w-[200px] md:h-[400px] md:w-[400px] object-contain bg-orange-400"
                             alt="profil-image"
                             src={urlFor(homePage?.heroImage).url()}
                             height={250}
