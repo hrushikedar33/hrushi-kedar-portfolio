@@ -18,7 +18,7 @@ const Experiance = ({ experiance }: Props) => {
 
             <hr className="mt-2 border-2" />
             <div>
-                <p className="p-5">tset</p>
+                <p className="p-5">test</p>
             </div>
         </div>
     );

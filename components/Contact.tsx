@@ -1,8 +1,12 @@
+import { HomePage } from '@/typings';
+import Link from 'next/link';
 import React from 'react';
 
-type Props = {};
+type Props = {
+    homePage: HomePage;
+};
 
-const Contact = (props: Props) => {
+const Contact = ({ homePage }: Props) => {
     return (
         <div className="group flex flex-col mb-16">
             <div className="text-3xl font-bold">
@@ -13,8 +17,20 @@ const Contact = (props: Props) => {
             </div>
 
             <hr className="mt-2 border-2" />
-            <div>
-                <p className="p-5">tset</p>
+            <div className="p-5">
+                <p className="">No fancy contact section here 😅</p>
+                <p className="">
+                    Just email me at:{' '}
+                    <Link
+                        href={`mailto:${homePage.email}?subject=IMP:%20Want%20to%20talk`}
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                    >
+                        <span className="text-orange-400 font-semibold">
+                            {homePage.email}
+                        </span>
+                    </Link>
+                </p>
             </div>
         </div>
     );

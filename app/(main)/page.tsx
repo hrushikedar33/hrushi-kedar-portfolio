@@ -39,7 +39,7 @@ export default async function Home() {
             </section>
 
             <section id="contact-me" className="snap-end">
-                <Contact />
+                <Contact homePage={homePage} />
             </section>
         </div>
     );
