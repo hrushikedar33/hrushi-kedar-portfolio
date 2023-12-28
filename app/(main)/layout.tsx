@@ -1,7 +1,6 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { getHomePage } from '@/sanity/utils/getHomePage';
-import { getSocial } from '@/sanity/utils/getSocial';
 import React from 'react';
 
 const MainLayout = async ({ children }: { children: React.ReactNode }) => {

@@ -9,7 +9,7 @@ type Props = {
 const AboutMe = ({ homePage }: Props) => {
     return (
         <div className="group flex flex-col mb-16">
-            <div className="text-3xl font-bold">
+            <div className="text-2xl md:text-3xl font-bold">
                 <span className="group-hover:text-orange-400">About </span>
                 <span className="text-orange-400 group-hover:text-inherit">
                     Me

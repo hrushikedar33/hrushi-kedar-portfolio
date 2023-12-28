@@ -19,7 +19,7 @@ export function MenuToggle() {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button
-                    className="bg-transparent border-0"
+                    className="bg-transparent border-2 rounded-lg"
                     variant="outline"
                     size="icon"
                 >

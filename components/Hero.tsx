@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { SocialIcon } from 'react-social-icons';
+import { EnvelopeIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 
 import { Button } from '@/components/ui/button';
 import { HomePage, Social } from '@/typings';
@@ -49,8 +50,20 @@ const Hero = ({ homePage, socials }: Props) => {
                     </div>
 
                     <div className="mt-10 md:mt-0 space-x-2">
-                        <Button className="font-semibold">Mail</Button>
-                        <Button className="font-semibold">Resume</Button>
+                        <Link
+                            href={`mailto:${homePage.email}?subject=IMP:%20Want%20to%20talk`}
+                        >
+                            <Button className="font-semibold border-2 hover:text-orange-400 hover:bg-inherit">
+                                <EnvelopeIcon className="h-7 w-7" /> &nbsp;Mail
+                            </Button>
+                        </Link>
+                        <Link href={homePage.resumeURL}>
+                            <Button className="font-semibold border-2 hover:text-orange-400 hover:bg-inherit">
+                                {' '}
+                                <BookOpenIcon className="h-7 w-7" />{' '}
+                                &nbsp;Resume
+                            </Button>
+                        </Link>
                     </div>
                     <div className="mt-5 md:mb-20 space-x-2">
                         <Link href="#about-me">

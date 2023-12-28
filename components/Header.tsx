@@ -29,7 +29,7 @@ const Header = ({ homePage }: Props) => {
                             scale: 1,
                         }}
                         transition={{ duration: 1.5 }}
-                        className="group font-bold text-xl md:text-3xl cursor-pointer"
+                        className="group font-bold text-2xl md:text-3xl cursor-pointer"
                     >
                         <span className="group-hover:text-orange-400">
                             hrush
