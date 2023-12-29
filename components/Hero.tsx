@@ -53,15 +53,16 @@ const Hero = ({ homePage, socials }: Props) => {
                         <Link
                             href={`mailto:${homePage.email}?subject=IMP:%20Want%20to%20talk`}
                         >
-                            <Button className="font-semibold border-2 hover:text-orange-400 hover:bg-inherit">
-                                <EnvelopeIcon className="h-7 w-7" /> &nbsp;Mail
+                            <Button className="gap-x-2 font-semibold border-2 hover:text-orange-400 hover:bg-inherit">
+                                <EnvelopeIcon className="h-7 w-7" />{' '}
+                                <div>Mail</div>
                             </Button>
                         </Link>
                         <Link href={homePage.resumeURL}>
-                            <Button className="font-semibold border-2 hover:text-orange-400 hover:bg-inherit">
+                            <Button className="gap-x-2 font-semibold border-2 hover:text-orange-400 hover:bg-inherit">
                                 {' '}
                                 <BookOpenIcon className="h-7 w-7" />{' '}
-                                &nbsp;Resume
+                                <div>Resume</div>
                             </Button>
                         </Link>
                     </div>

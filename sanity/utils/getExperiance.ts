@@ -5,7 +5,7 @@ import { sanityClient } from '@/sanity/config/clientConfig';
 
 export async function getExperiance(): Promise<Experiance[]> {
     return sanityClient.fetch(groq`*[_type == "experiance"] {
-        ...,
-        technologies[]->,
-      }`);
+    ...,
+    technologies[]->,
+  } `);
 }

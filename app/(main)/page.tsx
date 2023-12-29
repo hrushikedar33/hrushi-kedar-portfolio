@@ -9,11 +9,12 @@ import { getHomePage } from '@/sanity/utils/getHomePage';
 import { getExperiance } from '@/sanity/utils/getExperiance';
 import { getSocial } from '@/sanity/utils/getSocial';
 import { getTechnologieStack } from '@/sanity/utils/getTechnologieStack';
+import { getSkill } from '@/sanity/utils/getSkill';
 
 export default async function Home() {
     const homePage = await getHomePage();
     const socials = await getSocial();
-    const experiance = await getExperiance();
+    const experiances = await getExperiance();
     const technologyStack = await getTechnologieStack();
 
     return (
@@ -27,7 +28,7 @@ export default async function Home() {
             </section>
 
             <section id="my-experiance" className="snap-center">
-                <Experiance experiance={experiance} />
+                <Experiance experiances={experiances} />
             </section>
 
             <section id="my-skills" className="snap-center">

@@ -1,12 +1,14 @@
 import React from 'react';
 
 import { Experiance } from '@/typings';
+import ExperianceCard from './ExperianceCard';
 
 type Props = {
-    experiance: Experiance[];
+    experiances: Experiance[];
 };
 
-const Experiance = ({ experiance }: Props) => {
+const Experiance = ({ experiances }: Props) => {
+    //console.log(experiances[0].company);
     return (
         <div className="group flex flex-col mb-16">
             <div className="text-2xl md:text-3xl font-bold">
@@ -17,8 +19,14 @@ const Experiance = ({ experiance }: Props) => {
             </div>
 
             <hr className="mt-2 border-2" />
-            <div>
-                <p className="p-5">test</p>
+            <div className="p-5">
+                {experiances?.map((experiance) => (
+                    // TODO: mobile view make it scrollable horizontal
+                    <ExperianceCard
+                        key={experiance._id}
+                        experiance={experiance}
+                    />
+                ))}
             </div>
         </div>
     );
