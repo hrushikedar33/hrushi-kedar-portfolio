@@ -1,5 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 
+import { urlFor } from '@/sanity/config/clientConfig';
 import {
     Card,
     CardContent,
@@ -9,26 +11,36 @@ import {
     CardTitle,
 } from '@/components/ui/card';
 import { Project } from '@/typings';
+import SkillBadge from './skill-badge';
 
 type Props = {
     project: Project;
 };
 
 const ProjectCard = ({ project }: Props) => {
+    const projectImage = urlFor(project.image).url();
+
     return (
         <Card>
-            <div>
+            <div
+                className="flex flex-col bg-cover rounded-md justify-end h-[220px]"
+                style={{
+                    backgroundImage: `linear-gradient(0deg, rgba(34, 40, 49, 0.95) 33%, rgba(0, 0, 0, 0.3) 100%), url(${projectImage})`,
+                }}
+            >
                 <CardHeader>
                     <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
                 </CardHeader>
+
+                <CardFooter className="flex flex-nowrap overflow-y-auto gap-x-2">
+                    {project.technologies?.map((technology) => (
+                        <SkillBadge
+                            key={technology._id}
+                            technology={technology}
+                        />
+                    ))}
+                </CardFooter>
             </div>
-            <CardContent>
-                <p>Card Content</p>
-            </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
         </Card>
     );
 };

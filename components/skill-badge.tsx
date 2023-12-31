@@ -12,7 +12,7 @@ const SkillBadge = ({ technology }: Props) => {
     return (
         <Badge className="flex gap-x-2 border-2 border-primary hover:bg-primary/10 rounded-md h-8 transition ease-in duration-300">
             <Image
-                className=""
+                className="h-6 w-6 object-cover"
                 alt={technology.title}
                 src={urlFor(technology.image).url()}
                 height={16}

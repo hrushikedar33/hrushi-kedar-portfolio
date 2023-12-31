@@ -63,7 +63,7 @@ const ExperianceCard = ({ experiance }: Props) => {
                     <li key={i}>{point}</li>
                 ))}
             </CardContent>
-            <CardFooter className="felx gap-x-2">
+            <CardFooter className="flex flex-wrap gap-2">
                 {experiance.technologies.map((technology, i) => (
                     <SkillBadge key={i} technology={technology} />
                 ))}
