@@ -1,8 +1,13 @@
 import React from 'react';
 
-type Props = {};
+import { Project } from '@/typings';
+import ProjectCard from './ProjectCard';
 
-const Projects = (props: Props) => {
+type Props = {
+    projects: Project[];
+};
+
+const Projects = ({ projects }: Props) => {
     return (
         <div className="group flex flex-col mb-16">
             <div className="text-2xl md:text-3xl font-bold">
@@ -13,8 +18,10 @@ const Projects = (props: Props) => {
             </div>
 
             <hr className="mt-2 border-2" />
-            <div>
-                <p className="p-5">test</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-5">
+                {projects?.map((project) => (
+                    <ProjectCard key={project._id} project={project} />
+                ))}
             </div>
         </div>
     );

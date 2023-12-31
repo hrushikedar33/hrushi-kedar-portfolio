@@ -1,6 +1,7 @@
-import { defineConfig } from 'sanity';
+import { defineConfig, isDev } from 'sanity';
 import { deskTool } from 'sanity/desk';
 import { schemaTypes } from './sanity/schemas/index';
+import { visionTool } from '@sanity/vision';
 
 const config = defineConfig({
     title: 'hrushikedar-portfolio',
@@ -8,7 +9,7 @@ const config = defineConfig({
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
     apiVersion: '2023-12-26',
     basePath: '/admin',
-    plugins: [deskTool()],
+    plugins: isDev ? [deskTool(), visionTool()] : [deskTool()],
     schema: { types: schemaTypes },
 });
 

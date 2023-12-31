@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 import { ModeToggle } from './theme-toggle';
 import { HomePage } from '@/typings';
@@ -12,6 +13,8 @@ type Props = {
 };
 
 const Header = ({ homePage }: Props) => {
+    const router = useRouter();
+
     return (
         <header className="sticky top-0 py-5 z-30">
             <div className="flex container mx-auto items-center justify-between">
@@ -59,10 +62,16 @@ const Header = ({ homePage }: Props) => {
                 >
                     {/* TODO: Mobile view hamburgir menue */}
                     <div className="hidden md:block space-x-3">
-                        <Button className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2">
+                        <Button
+                            className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2"
+                            onClick={() => router.push('/projects')}
+                        >
                             Projects
                         </Button>
-                        <Button className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2">
+                        <Button
+                            className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2"
+                            onClick={() => router.push('/contact')}
+                        >
                             Contact
                         </Button>
                     </div>

@@ -38,7 +38,10 @@ const ExperianceCard = ({ experiance }: Props) => {
                                 {experiance.jobTitle}
                             </CardDescription>
                         </div>
-                        <div className="flex gap-x-3">
+                        <div className="flex flex-col md:items-center gap-x-3">
+                            <CardDescription>
+                                {experiance.jobLocation}
+                            </CardDescription>
                             <CardDescription>
                                 {new Date(
                                     experiance.dateStarted

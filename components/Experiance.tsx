@@ -8,7 +8,6 @@ type Props = {
 };
 
 const Experiance = ({ experiances }: Props) => {
-    //console.log(experiances[0].company);
     return (
         <div className="group flex flex-col mb-16">
             <div className="text-2xl md:text-3xl font-bold">

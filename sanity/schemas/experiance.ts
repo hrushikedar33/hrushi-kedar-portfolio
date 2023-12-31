@@ -37,6 +37,11 @@ const experiance = {
             type: 'boolean',
         },
         {
+            name: 'jobLocation',
+            title: 'JobLocation',
+            type: 'string',
+        },
+        {
             name: 'technologies',
             title: 'Technologies',
             type: 'array',

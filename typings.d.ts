@@ -35,6 +35,7 @@ export interface Experiance extends SanityBody {
     dateEnded: date;
     isCurrentlyWorking: boolean;
     jobTitle: string;
+    jobLocation: string;
     points: string[];
     technologies: Technology[];
 }
@@ -49,10 +50,10 @@ export interface Skill extends SanityBody {
 export interface TechnologieStack extends SanityBody {
     _type: 'technologieStack';
     title: string;
-    languages: string[];
-    frameworks: string[];
-    databases: string[];
-    tools: string[];
+    languages: Technology[];
+    frameworks: Technology[];
+    databases: Technology[];
+    tools: Technology[];
 }
 
 export interface Technology extends SanityBody {
