@@ -1,3 +1,4 @@
+import blog from './blog';
 import experiance from './experiance';
 import homePage from './homePage';
 import project from './project';
@@ -10,6 +11,7 @@ export const schemaTypes = [
     experiance,
     skill,
     project,
+    blog,
     social,
     technologieStack,
 ];

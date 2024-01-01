@@ -73,6 +73,15 @@ export interface Project extends SanityBody {
     technologies: Technology[];
 }
 
+export interface Blog extends SanityBody {
+    _type: 'blog';
+    title: string;
+    summary: string;
+    image: Image;
+    linkToBlog: string;
+    technologies: Technology[];
+}
+
 export interface Social extends SanityBody {
     _type: 'social';
     title: string;

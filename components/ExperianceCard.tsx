@@ -20,7 +20,7 @@ type Props = {
 
 const ExperianceCard = ({ experiance }: Props) => {
     return (
-        <Card className="mb-5">
+        <Card className="group mb-5">
             <CardHeader>
                 <div className="flex gap-x-4 items-center">
                     <Image

@@ -10,7 +10,7 @@ type Props = {
 
 const SkillBadge = ({ technology }: Props) => {
     return (
-        <Badge className="flex gap-x-2 border-2 border-primary hover:bg-primary/10 rounded-md h-8 transition ease-in duration-300">
+        <Badge className="inline-flex gap-x-2 border-2 border-primary shrink-0 hover:bg-primary/10 rounded-md h-8 transition ease-in duration-300">
             <Image
                 className="h-6 w-6 object-cover"
                 alt={technology.title}

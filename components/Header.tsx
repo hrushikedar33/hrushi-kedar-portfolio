@@ -16,7 +16,7 @@ const Header = ({ homePage }: Props) => {
     const router = useRouter();
 
     return (
-        <header className="sticky top-0 py-5 z-30">
+        <header className="sticky top-0 py-5 z-30 backdrop-blur-sm">
             <div className="flex container mx-auto items-center justify-between">
                 {/* Left side */}
                 <Link href={'/'} prefetch={false}>
