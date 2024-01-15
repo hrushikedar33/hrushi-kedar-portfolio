@@ -61,9 +61,11 @@ const ProjectCardDescription = ({ project }: Props) => {
                     <CardDescription className="text-white mb-4">
                         {project.summary}
                     </CardDescription>
-                    {project.points?.map((point, i) => (
-                        <ul key={i}>{point}</ul>
-                    ))}
+                    <ul className="list-disc space-y-2 text-left">
+                        {project.points?.map((point, i) => (
+                            <li key={i}>{point}</li>
+                        ))}
+                    </ul>
                 </CardContent>
 
                 <CardFooter className="inline-flex flex-nowrap gap-2 overflow-y-auto">
