@@ -1,7 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 
 import { Project } from '@/typings';
 import ProjectCard from './ProjectCard';
+import MoreCard from './more-card';
 
 type Props = {
     projects: Project[];
@@ -19,9 +21,12 @@ const Projects = ({ projects }: Props) => {
 
             <hr className="mt-2 border-2" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-5">
-                {projects?.map((project) => (
+                {projects?.slice(0, 5).map((project) => (
                     <ProjectCard key={project._id} project={project} />
                 ))}
+                <Link href={'/projects'}>
+                    <MoreCard />
+                </Link>
             </div>
         </div>
     );

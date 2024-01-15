@@ -67,11 +67,6 @@ const Hero = ({ homePage, socials }: Props) => {
                         </Link>
                     </div>
                     <div className="mt-5 md:mb-20 space-x-2">
-                        <Link href="#about-me">
-                            <button className="heroButton hover:text-orange-400">
-                                About
-                            </button>
-                        </Link>
                         <Link href="#my-experiance">
                             <button className="heroButton hover:text-orange-400">
                                 Experiance
@@ -85,6 +80,11 @@ const Hero = ({ homePage, socials }: Props) => {
                         <Link href="#my-projects">
                             <button className="heroButton hover:text-orange-400">
                                 Projects
+                            </button>
+                        </Link>
+                        <Link href="#my-blogs">
+                            <button className="heroButton hover:text-orange-400">
+                                Blogs
                             </button>
                         </Link>
                     </div>

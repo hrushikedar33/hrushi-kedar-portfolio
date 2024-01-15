@@ -1,6 +1,9 @@
-import { Blog } from '@/typings';
 import React from 'react';
+import Link from 'next/link';
+
+import { Blog } from '@/typings';
 import BlogCard from './BlogCard';
+import MoreCard from './more-card';
 
 type Props = {
     blogs: Blog[];

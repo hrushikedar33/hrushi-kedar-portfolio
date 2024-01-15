@@ -43,7 +43,7 @@ export default async function Home() {
                 <Projects projects={projects} />
             </section>
 
-            <section id="my-projects" className="snap-center">
+            <section id="my-blogs" className="snap-center">
                 <Blog blogs={blogs} />
             </section>
 

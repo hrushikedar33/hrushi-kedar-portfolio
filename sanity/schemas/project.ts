@@ -38,6 +38,12 @@ const project = {
             title: 'LinkToLaunch',
             type: 'url',
         },
+        {
+            name: 'points',
+            title: 'Points',
+            type: 'array',
+            of: [{ type: 'string' }],
+        },
     ],
 };
 
