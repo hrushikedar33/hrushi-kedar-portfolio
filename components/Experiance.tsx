@@ -13,7 +13,7 @@ const Experiance = ({ experiances }: Props) => {
             <div className="group text-2xl md:text-3xl font-bold">
                 <span className="group-hover:text-orange-400">My </span>
                 <span className="text-orange-400 group-hover:text-inherit">
-                    Experiance
+                    Experience
                 </span>
             </div>
 
