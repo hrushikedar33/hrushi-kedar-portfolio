@@ -1,10 +1,12 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
+import { RocketIcon } from '@radix-ui/react-icons';
 
 import { urlFor } from '@/sanity/config/clientConfig';
 import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Project } from '@/typings';
 import SkillBadge from './skill-badge';
+import Link from 'next/link';
 
 type Props = {
     project: Project;
@@ -12,6 +14,7 @@ type Props = {
 
 const ProjectCard = ({ project }: Props) => {
     const projectImage = urlFor(project.image).url();
+    const linkToLaunch = project.linkToLaunch;
 
     return (
         <Card className="group">
@@ -26,11 +29,20 @@ const ProjectCard = ({ project }: Props) => {
                         {project.title}
                     </CardTitle>
                     <div>
-                        <SocialIcon
-                            url={project.linkToBuild}
-                            bgColor="transparent"
-                            fgColor="white"
-                        />
+                        {project?.linkToLaunch?.length > 1 ? (
+                            <Link href={project?.linkToLaunch}>
+                                <RocketIcon
+                                    color="orange"
+                                    className="h-[1.2rem] w-[1.2rem]"
+                                />
+                            </Link>
+                        ) : (
+                            <SocialIcon
+                                url={project.linkToBuild}
+                                bgColor="transparent"
+                                fgColor="white"
+                            />
+                        )}
                     </div>
                 </CardHeader>
 

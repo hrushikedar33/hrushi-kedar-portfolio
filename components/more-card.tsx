@@ -15,7 +15,7 @@ const MoreCard = (props: Props) => {
         <Card className="group">
             <div className="flex flex-col bg-cover rounded-md justify-center items-center h-[220px]">
                 <CardHeader className="flex flex-row items-center justify-between px-6 py-2">
-                    <CardTitle className="dark:text-primary text-secondary group-hover:text-orange-400">
+                    <CardTitle className="dark:text-primary text-primary group-hover:text-orange-400">
                         More Projects
                     </CardTitle>
                 </CardHeader>

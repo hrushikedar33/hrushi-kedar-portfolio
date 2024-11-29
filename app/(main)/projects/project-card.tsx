@@ -1,6 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
+import { urlFor } from '@/sanity/config/clientConfig';
 import { SocialIcon } from 'react-social-icons';
 import { RocketIcon } from '@radix-ui/react-icons';
+import { Project } from '@/typings';
 
 import {
     Card,
@@ -11,9 +14,6 @@ import {
     CardTitle,
 } from '@/components/ui/card';
 import SkillBadge from '@/components/skill-badge';
-import { Project } from '@/typings';
-import { urlFor } from '@/sanity/config/clientConfig';
-import Link from 'next/link';
 
 type Props = {
     project: Project;
@@ -25,7 +25,7 @@ const ProjectCardDescription = ({ project }: Props) => {
     return (
         <Card className="group">
             <div
-                className="flex flex-col bg-cover rounded-md justify-end"
+                className="flex h-full justify-between flex-col bg-cover rounded-md"
                 style={{
                     backgroundImage: `linear-gradient(0deg, rgba(34, 40, 49, 0.95) 33%, rgba(0, 0, 0, 0.3) 100%), url(${projectImage})`,
                 }}
@@ -61,7 +61,7 @@ const ProjectCardDescription = ({ project }: Props) => {
                     <CardDescription className="text-white mb-4">
                         {project.summary}
                     </CardDescription>
-                    <ul className="list-disc space-y-2 text-left">
+                    <ul className="list-disc text-white space-y-2 text-left">
                         {project.points?.map((point, i) => (
                             <li key={i}>{point}</li>
                         ))}
