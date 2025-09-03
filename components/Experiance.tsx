@@ -7,7 +7,7 @@ type Props = {
     experiances: Experiance[];
 };
 
-const Experiance = ({ experiances }: Props) => {
+const Experiances = ({ experiances }: Props) => {
     return (
         <div className="flex flex-col mb-16">
             <div className="group text-2xl md:text-3xl font-bold">
@@ -31,4 +31,4 @@ const Experiance = ({ experiances }: Props) => {
     );
 };
 
-export default Experiance;
+export default Experiances;

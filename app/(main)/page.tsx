@@ -1,10 +1,10 @@
 import AboutMe from '@/components/AboutMe';
 import Contact from '@/components/Contact';
-import Experiance from '@/components/Experiance';
+import Experiances from '@/components/Experiance';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
-import Blog from '@/components/Blog';
+import Blogs from '@/components/Blog';
 
 import { getHomePage } from '@/sanity/utils/getHomePage';
 import { getExperiance } from '@/sanity/utils/getExperiance';
@@ -32,7 +32,7 @@ export default async function Home() {
             </section>
 
             <section id="my-experiance" className="snap-center">
-                <Experiance experiances={experiances} />
+                <Experiances experiances={experiances} />
             </section>
 
             <section id="my-skills" className="snap-center">
@@ -44,7 +44,7 @@ export default async function Home() {
             </section>
 
             <section id="my-blogs" className="snap-center">
-                <Blog blogs={blogs} />
+                <Blogs blogs={blogs} />
             </section>
 
             <section id="contact-me" className="snap-end">

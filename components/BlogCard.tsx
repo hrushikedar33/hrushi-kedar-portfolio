@@ -9,7 +9,7 @@ import {
     CardTitle,
 } from '@/components/ui/card';
 
-import Blog from './Blog';
+import { Blog } from '@/typings';
 import SkillBadge from './skill-badge';
 
 type Props = {

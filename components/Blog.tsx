@@ -9,7 +9,7 @@ type Props = {
     blogs: Blog[];
 };
 
-const Blog = ({ blogs }: Props) => {
+const Blogs = ({ blogs }: Props) => {
     return (
         <div className="flex flex-col mb-16">
             <div className="group text-2xl md:text-3xl font-bold">
@@ -34,4 +34,4 @@ const Blog = ({ blogs }: Props) => {
     );
 };
 
-export default Blog;
+export default Blogs;

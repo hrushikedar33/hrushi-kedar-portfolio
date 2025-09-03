@@ -69,7 +69,7 @@ const Hero = ({ homePage, socials }: Props) => {
                     <div className="mt-5 md:mb-20 space-x-2">
                         <Link href="#my-experiance">
                             <button className="heroButton hover:text-orange-400">
-                                Experiance
+                                Experience
                             </button>
                         </Link>
                         <Link href="#my-skills">
