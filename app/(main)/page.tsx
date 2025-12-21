@@ -13,6 +13,9 @@ import { getTechnologieStack } from '@/sanity/utils/getTechnologieStack';
 import { getProject } from '@/sanity/utils/getProject';
 import { getBlog } from '@/sanity/utils/getBlog';
 
+// Revalidate content every hour (3600 seconds)
+export const revalidate = 3600;
+
 export default async function Home() {
     const homePage = await getHomePage();
     const socials = await getSocial();

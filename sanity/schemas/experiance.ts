@@ -4,6 +4,13 @@ const experiance = {
     type: 'document',
     fields: [
         {
+            name: 'order',
+            title: 'Order',
+            description: 'Order of the experience (lower numbers appear first)',
+            type: 'number',
+            validation: (Rule: any) => Rule.required().min(0),
+        },
+        {
             name: 'jobTitle',
             title: 'JobTitle',
             type: 'string',

@@ -4,6 +4,13 @@ const blog = {
     type: 'document',
     fields: [
         {
+            name: 'order',
+            title: 'Order',
+            description: 'Order of the blog (lower numbers appear first)',
+            type: 'number',
+            validation: (Rule: any) => Rule.required().min(0),
+        },
+        {
             name: 'title',
             title: 'Title',
             description: 'Title of the blog',

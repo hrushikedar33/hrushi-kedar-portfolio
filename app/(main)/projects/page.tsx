@@ -2,6 +2,9 @@ import { getProject } from '@/sanity/utils/getProject';
 import React from 'react';
 import ProjectCardDescription from './project-card';
 
+// Revalidate content every hour (3600 seconds)
+export const revalidate = 3600;
+
 const page = async () => {
     const projects = await getProject();
 

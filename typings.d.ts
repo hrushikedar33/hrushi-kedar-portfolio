@@ -29,6 +29,7 @@ export interface HomePage extends SanityBody {
 
 export interface Experiance extends SanityBody {
     _type: 'experiance';
+    order: number;
     company: string;
     companyImage: Image;
     dateStarted: date;
@@ -65,6 +66,7 @@ export interface Technology extends SanityBody {
 
 export interface Project extends SanityBody {
     _type: 'project';
+    order: number;
     title: string;
     summary: string;
     image: Image;
@@ -76,6 +78,7 @@ export interface Project extends SanityBody {
 
 export interface Blog extends SanityBody {
     _type: 'blog';
+    order: number;
     title: string;
     summary: string;
     image: Image;

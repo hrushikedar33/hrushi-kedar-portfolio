@@ -4,7 +4,7 @@ import { groq } from 'next-sanity';
 import { sanityClient } from '@/sanity/config/clientConfig';
 
 export async function getBlog(): Promise<Blog[]> {
-    return sanityClient.fetch(groq`*[_type == "blog"] {
+    return sanityClient.fetch(groq`*[_type == "blog"] | order(order asc) {
         ...,
         technologies[]->,
       } `);

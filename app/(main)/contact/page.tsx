@@ -2,6 +2,9 @@ import { getHomePage } from '@/sanity/utils/getHomePage';
 import Link from 'next/link';
 import React from 'react';
 
+// Revalidate content every hour (3600 seconds)
+export const revalidate = 3600;
+
 async function ContactPage() {
     const homePage = await getHomePage();
 
