@@ -41,6 +41,9 @@ export function MenuToggle() {
                 <DropdownMenuItem onClick={() => router.push('/projects')}>
                     Projects
                 </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push('/blogs')}>
+                    Blogs
+                </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => router.push('/contact')}>
                     Contact
                 </DropdownMenuItem>

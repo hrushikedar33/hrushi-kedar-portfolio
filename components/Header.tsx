@@ -70,6 +70,12 @@ const Header = ({ homePage }: Props) => {
                         </Button>
                         <Button
                             className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2"
+                            onClick={() => router.push('/blogs')}
+                        >
+                            Blogs
+                        </Button>
+                        <Button
+                            className="font-semibold hover:text-orange-400 hover:bg-inherit hover:border-2"
                             onClick={() => router.push('/contact')}
                         >
                             Contact
