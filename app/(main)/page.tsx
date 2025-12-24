@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Blogs from '@/components/Blog';
+import SectionIndicator from '@/components/SectionIndicator';
 
 import { getHomePage } from '@/sanity/utils/getHomePage';
 import { getExperiance } from '@/sanity/utils/getExperiance';
@@ -25,34 +26,37 @@ export default async function Home() {
     const blogs = await getBlog();
 
     return (
-        <div className="container mx-auto">
-            <section id="hero" className="snap-start">
-                <Hero homePage={homePage} socials={socials} />
-            </section>
+        <>
+            <SectionIndicator />
+            <div className="container mx-auto">
+                <section id="hero" className="snap-start">
+                    <Hero homePage={homePage} socials={socials} />
+                </section>
 
-            <section id="about-me" className="snap-center">
-                <AboutMe homePage={homePage} />
-            </section>
+                <section id="about-me" className="snap-center">
+                    <AboutMe homePage={homePage} />
+                </section>
 
-            <section id="my-experiance" className="snap-center">
-                <Experiances experiances={experiances} />
-            </section>
+                <section id="my-experiance" className="snap-center">
+                    <Experiances experiances={experiances} />
+                </section>
 
-            <section id="my-skills" className="snap-center">
-                <Skills technologyStack={technologyStack} />
-            </section>
+                <section id="my-skills" className="snap-center">
+                    <Skills technologyStack={technologyStack} />
+                </section>
 
-            <section id="my-projects" className="snap-center">
-                <Projects projects={projects} />
-            </section>
+                <section id="my-projects" className="snap-center">
+                    <Projects projects={projects} />
+                </section>
 
-            <section id="my-blogs" className="snap-center">
-                <Blogs blogs={blogs} />
-            </section>
+                <section id="my-blogs" className="snap-center">
+                    <Blogs blogs={blogs} />
+                </section>
 
-            <section id="contact-me" className="snap-end">
-                <Contact homePage={homePage} />
-            </section>
-        </div>
+                <section id="contact-me" className="snap-end">
+                    <Contact homePage={homePage} />
+                </section>
+            </div>
+        </>
     );
 }
