@@ -19,6 +19,7 @@ import {
     CardTitle,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 
 type Props = {
     project: Project;
@@ -93,9 +94,9 @@ const ProjectCardDescription = ({ project }: Props) => {
                     </div>
 
                     {/* Description */}
-                    <CardDescription className="text-muted-foreground mb-4 text-sm lg:text-base leading-relaxed">
-                        {project.summary}
-                    </CardDescription>
+                    <div className="text-muted-foreground mb-4 text-sm lg:text-base leading-relaxed">
+                        <MarkdownRenderer content={project.summary} />
+                    </div>
 
                     {/* Points */}
                     {project.points && project.points.length > 0 && (

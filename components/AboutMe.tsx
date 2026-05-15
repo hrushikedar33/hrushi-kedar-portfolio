@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { HomePage } from '@/typings';
+import MarkdownRenderer from './MarkdownRenderer';
 
 type Props = {
     homePage: HomePage;
@@ -17,8 +18,8 @@ const AboutMe = ({ homePage }: Props) => {
             </div>
 
             <hr className="mt-2 border-2" />
-            <div className="p-5">
-                <p>{homePage.backgroundInformation}</p>
+            <div className="p-5 text-base leading-relaxed text-foreground/90">
+                <MarkdownRenderer content={homePage.backgroundInformation} />
             </div>
         </div>
     );

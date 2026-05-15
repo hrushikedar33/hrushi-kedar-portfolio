@@ -13,6 +13,8 @@ interface Image {
     };
 }
 
+declare module '*.css';
+
 export interface HomePage extends SanityBody {
     _type: 'homePage';
     address: string;
@@ -31,13 +33,14 @@ export interface Experiance extends SanityBody {
     _type: 'experiance';
     order: number;
     company: string;
+    companyUrl?: string;
     companyImage: Image;
     dateStarted: date;
     dateEnded: date;
     isCurrentlyWorking: boolean;
     jobTitle: string;
     jobLocation: string;
-    points: string[];
+    description?: string;
     technologies: Technology[];
 }
 

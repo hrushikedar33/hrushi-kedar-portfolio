@@ -26,7 +26,12 @@ const experiance = {
         {
             name: 'company',
             title: 'Company',
-            type: 'text',
+            type: 'string',
+        },
+        {
+            name: 'companyUrl',
+            title: 'CompanyUrl',
+            type: 'url',
         },
         {
             name: 'dateStarted',
@@ -55,10 +60,9 @@ const experiance = {
             of: [{ type: 'reference', to: { type: 'skill' } }],
         },
         {
-            name: 'points',
-            title: 'Points',
-            type: 'array',
-            of: [{ type: 'string' }],
+            name: 'description',
+            title: 'Description',
+            type: 'markdown',
         },
     ],
 };

@@ -32,7 +32,7 @@ const homePage = {
         {
             name: 'backgroundInformation',
             title: 'BackgroundInformation',
-            type: 'text',
+            type: 'markdown',
         },
         {
             name: 'profilePic',

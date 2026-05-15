@@ -27,7 +27,7 @@ const project = {
         {
             name: 'summary',
             title: 'Summary',
-            type: 'text',
+            type: 'markdown',
         },
         {
             name: 'technologies',

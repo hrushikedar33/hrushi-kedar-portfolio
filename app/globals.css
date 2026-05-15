@@ -72,6 +72,9 @@
     }
     body {
         @apply bg-background text-foreground;
+        font-family:
+            'Anthropic Sans', var(--font-manrope), ui-sans-serif, system-ui,
+            sans-serif;
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
